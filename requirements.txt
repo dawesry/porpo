@@ -1,4 +1,0 @@
-fastf1
-PySimpleGUI
-datetime
-pandas

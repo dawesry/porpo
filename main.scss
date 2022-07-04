@@ -1,0 +1,110 @@
+/* IMPORTS */
+
+@import "https://fonts.googleapis.com/css?family=Montserrat&display=swap";
+
+/* CUSTOM VARIABLES */
+
+$primary: hsl(190, 100%, 50%);
+
+$header-bg: hsl(0, 0%, 50%);
+$header-text: hsl(0, 0%, 100%);
+
+$body-bg: hsl(0, 0%, 75%);
+$body-text: hsl(0, 0, 0%);
+
+$footer-bg: hsl(0, 0%, 0%);
+$footer-text: hsl(0, 0%, 100%);
+
+
+$dark-bg: hsl(0, 0%, 0%);
+$dark-text: hsl(0, 0%, 100%);
+
+$light-bg: hsl(0, 0%, 95%);
+$light-text: hsl(0, 0%, 0%);
+
+$home-font: 'Montserrat', sans-serif;
+
+
+/* CONTENT STYLING */
+
+.hero {
+  &.is-light-bg {
+    background-color: $light-bg;
+    color: #fff;
+  }
+  .hero-body {
+    color: $light-text;
+  }
+}
+
+
+.tag:not(body) {
+  &.is-docker {
+    background-color: #2496ED; 
+    color: #fff;
+  }
+}
+
+.tile:not(.is-child) {
+  justify-content: center;
+}
+
+/* CUSTOM ELEMENTS */
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-button {
+  margin: 0 auto;
+  padding: 0.5rem;
+  opacity: 80%;
+
+  &:hover {
+    transform: scale(1.1);
+    opacity: 100%;
+  }
+
+  &#github {
+    content: url("assets/img/github.png");
+    height: 2rem;
+  }
+
+  &#twitter {
+    content: url("assets/img/twitter.png");
+    height: 2rem;
+  }
+
+  &#bulma {
+    content: url("https://bulma.io/images/made-with-bulma.png");
+    height: 2.5rem;
+  }
+}
+
+#badge {
+  margin: 0.25em;
+  padding: 0.35rem;
+  max-width: 90%;
+  height: auto;
+
+  &.docker {
+    content: url("//img.shields.io/badge/docker-white?style=for-the-badge&logo=docker&logoColor=2496ED");
+  }
+}
+
+#porpo-docker {
+  content: url("assets/img/porpo-docker.png");
+  width: 50%;
+}
+
+/* MEDIA QUERIES */
+/* DARK MODE */
+
+@media (prefers-color-scheme: dark) {
+}
+
+/* LIGHT MODE */
+
+@media (prefers-color-scheme: light) {
+}
