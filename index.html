@@ -8,42 +8,41 @@
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma-prefers-dark" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body>
-    <section class="hero is-light-bg">
+  <body class="custom">
+    <section class="hero">
       <div class="hero-body">
-        <p class="title is-1">
-          Porpo for Docker
-        </p>
-        <p class="subtitle">
-          A web app designed to make pulling F1 session data <strong>easy</strong>.
+        <figure class="image">
+          <img class ="hero-logo" id="porpo-desktop">
+        </figure>
+        <p class="subtitle hero-sub">
+          A data tool designed to make pulling F1 session telemetry <strong>easy</strong>.
           <br>
             <br>
-          <div class="tags has-addons">
-            <span class="tag is-docker is-medium">Built for</span>
-            <span class="tag is-white is-medium"><img id="badge" class="docker" /></span>
-          </div>
         </p>
+        <div class='building'>
+          <div class="tags has-addons">
+            <span class="tag is-medium is-python">Built with</span>
+            <span class="tag is-python build is-medium"><img id="badge" class="python" /></span>
+          </div>
+          <div class="tags has-addons">
+            <span class="tag is-medium is-docker">Building for</span>
+            <span class="tag is-docker build is-medium"><img id="badge" class="docker" /></span>
+          </div>
+        </div>
       </div>
     </section>
     <section class="section">
       <div class="container">
         <div class="content">
-          <div class="notification is-danger">
-            This page is <strong>under construction</strong>. Expect exciting changes soon!
+          <div class="notification is-info">
+            <span class="icon is-small">
+              <i class="fa-solid fa-flag" aria-hidden="true"></i>
+            </span>
+             Porpo for Docker is <strong>under construction</strong>. Expect exciting changes soon!
           </div>
-          <div class="container is-max-desktop">
-            <figure class="image">
-              <img id="porpo-docker">
-            </figure>
-          </div>
-          <h1>Roadmap Incoming!</h1>
-          <p>
-            A roadmap for Porpo for Docker will be available soon. As always, your continued
-            support is incredible, and much appreciated. 
-
-            Until an effective web app is written, Porpo for Desktop is available on GitHub. 
-          </p>
           <div class="card">
             <div class="card-content">
               <div class="tile is-ancestor">
@@ -93,13 +92,24 @@
               </p>
             </footer>
           </div>
+          <h1>Roadmap to Docker Incoming!</h1>
+          <figure class="image">
+            <img class="roadmap-img" id="porpo-docker">
+          </figure>
+          <h4>Get ready to take to the grid</h4>
+          <p>
+            A Porpo for Docker roadmap will be available soon! As always, your continued
+            support is incredible, and much appreciated. 
+
+            If you don't want to wait to use the Docker container, Porpo for Desktop is available for free. 
+          </p>
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer ">
       <div class="content has-text-centered">
         <p>
-          <strong>Porpo for Docker</strong> by <a href="https://dawes.cc">Ryan Dawes</a>. The source code is licensed
+          <strong>Porpo</strong> by <a href="https://dawes.cc">Ryan Dawes</a>. The source code is licensed
           <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
         </br>
         <div class="socials">

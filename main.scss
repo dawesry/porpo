@@ -4,45 +4,67 @@
 
 /* CUSTOM VARIABLES */
 
-$primary: hsl(190, 100%, 50%);
+:root {
+  --primary: hsl(190, 100%, 50%);
+  --home-font: 'Montserrat', sans-serif;
 
-$header-bg: hsl(0, 0%, 50%);
-$header-text: hsl(0, 0%, 100%);
+  --dark-bg: hsl(0, 0%, 5%);
+  --dark-text: hsl(0, 0%, 0%);
+  --dark-hero: hsl(0, 0%, 15%);
 
-$body-bg: hsl(0, 0%, 75%);
-$body-text: hsl(0, 0, 0%);
+  --light-bg: hsl(0, 0%, 100%);
+  --light-text: hsl(0, 0%, 100%);
+  --light-hero: hsl(0, 0%, 95%);
 
-$footer-bg: hsl(0, 0%, 0%);
-$footer-text: hsl(0, 0%, 100%);
-
-
-$dark-bg: hsl(0, 0%, 0%);
-$dark-text: hsl(0, 0%, 100%);
-
-$light-bg: hsl(0, 0%, 95%);
-$light-text: hsl(0, 0%, 0%);
-
-$home-font: 'Montserrat', sans-serif;
-
+  --bg-color: var(--light-bg);
+  --text-color: var(--dark-text);
+  --hero-color: var(--light-hero);
+}
 
 /* CONTENT STYLING */
 
-.hero {
-  &.is-light-bg {
-    background-color: $light-bg;
-    color: #fff;
-  }
-  .hero-body {
-    color: $light-text;
-  }
+.custom {
+  font-family: var(--home-font);
 }
 
+.hero {
+  background-color: var(--light-hero);
+}
 
-.tag:not(body) {
+.hero-sub {
+  text-align: center;
+}
+
+.hero-logo {
+  margin: 0 auto;
+}
+
+.tag {
   &.is-docker {
     background-color: #2496ED; 
     color: #fff;
+
+    &.build {
+      background-color: #FFFFFF;
+    }
   }
+
+  &.is-python {
+    background-color: #3776AB; 
+    color: #fff;
+
+    &.build {
+      background-color: #FFFFFF;
+    }
+  }
+}
+
+.building {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .tile:not(.is-child) {
@@ -50,6 +72,7 @@ $home-font: 'Montserrat', sans-serif;
 }
 
 /* CUSTOM ELEMENTS */
+
 .socials {
   display: flex;
   justify-content: center;
@@ -91,20 +114,23 @@ $home-font: 'Montserrat', sans-serif;
   &.docker {
     content: url("//img.shields.io/badge/docker-white?style=for-the-badge&logo=docker&logoColor=2496ED");
   }
+
+  &.python {
+    content: url("//img.shields.io/badge/python-white?style=for-the-badge&logo=python&logoColor=3776AB");
+  }
 }
 
 #porpo-docker {
   content: url("assets/img/porpo-docker.png");
   width: 50%;
+
+  &.roadmap-img {
+    max-width: 250px;
+  }
 }
 
-/* MEDIA QUERIES */
-/* DARK MODE */
-
-@media (prefers-color-scheme: dark) {
-}
-
-/* LIGHT MODE */
-
-@media (prefers-color-scheme: light) {
+#porpo-desktop {
+  content: url("assets/img/porpo-desktop.png");
+  max-width: 550px;
+  padding: .5rem;
 }
