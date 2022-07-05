@@ -1,34 +1,39 @@
 {
   "name": "porpo",
+  "author": "Ryan Dawes",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "predeploy": "rm -rf dist && parcel build src/index.html --public-url testing.dawes.cc && cp CNAME ./dist",
-    "deploy": "gh-pages -d dist",
-    "push-page": "rm -rf dist && parcel build src/index.html --public-url testing.dawes.cc && cp CNAME ./dist && gh-pages -d dist"
+    "css-watch":"sass --watch --no-source-map _sass/:css/",
+    "js-watch": "babel  --extensions '.tsx' _javascript --watch --out-file lib/main.js",
+    "dev":"npm-run-all --parallel css-watch js-watch",
+
+    "css-build": "sass --no-source-map _sass/:css/",
+    "js-build": "babel --extensions '.tsx' _javascript --out-file lib/main.js",
+    "build": "npm-run-all --parallel css-build js-build",
+
+    "copy": "rm -rf dist && mkdir dist && cp CNAME *.html ./dist && cp -r css/ lib/ assets/ ./dist",
+    "pages": "gh-pages -d ./dist",
+    "deploy": "npm-run-all --sequential build copy pages"
   },
   "dependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "latest",
+    "@babel/preset-typescript": "latest",
+    "gh-pages": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "latest",
+    "typescript": "latest",
+    "bulma": "latest",
+    "react": "latest",
+    "react-dom": "latest",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
-    "@parcel/transformer-sass": "latest",
     "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "autoprefixer": "latest",
-    "babel-cli": "latest",
-    "babel-preset-env": "latest",
-    "babel-preset-es2015-ie": "latest",
-    "bulma": "latest",
-    "gh-pages": "^4.0.0",
-    "parcel": "^2.6.2",
-    "react": "latest",
-    "react-dom": "latest",
-    "sass": "latest",
-    "typescript": "latest"
+    "@types/react-dom": "latest"
   },
   "devDependencies": {
-    "process": "^0.11.10",
+    "npm": "latest",
     "react-scripts": "latest"
   }
 }

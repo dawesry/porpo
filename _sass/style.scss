@@ -90,12 +90,12 @@
   }
 
   &#github {
-    content: url("assets/img/github.png");
+    content: url("../assets/img/github.png");
     height: 2rem;
   }
 
   &#twitter {
-    content: url("assets/img/twitter.png");
+    content: url("../assets/img/twitter.png");
     height: 2rem;
   }
 
@@ -121,7 +121,7 @@
 }
 
 #porpo-docker {
-  content: url("assets/img/porpo-docker.png");
+  content: url("../assets/img/porpo-docker.png");
   width: 50%;
 
   &.roadmap-img {
@@ -130,7 +130,7 @@
 }
 
 #porpo-desktop {
-  content: url("assets/img/porpo-desktop.png");
+  content: url("../assets/img/porpo-desktop.png");
   max-width: 550px;
   padding: .5rem;
 }
