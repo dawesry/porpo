@@ -16,12 +16,14 @@
     "@parcel/transformer-sass": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "bulma": "latest",
     "gh-pages": "^4.0.0",
     "parcel": "latest",
     "react": "latest",
     "react-dom": "latest",
     "typescript": "latest"
   },
+  
   "devDependencies": {
     "process": "^0.11.10",
     "react-scripts": "latest"
