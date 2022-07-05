@@ -1,12 +1,11 @@
 {
   "name": "porpo",
-  "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build",
-    "predeploy": "rm -rf dist && parcel build --public-url testing.dawes.cc && cp CNAME ./dist",
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html",
+    "predeploy": "rm -rf dist && parcel build ./src/index.html --public-url testing.dawes.cc && cp CNAME ./dist",
     "deploy": "gh-pages -d dist",
-    "push-page": "rm -rf dist && parcel build --public-url testing.dawes.cc && cp CNAME ./dist && gh-pages -d dist"
+    "push-page": "rm -rf dist && parcel build ./src/index.html --public-url testing.dawes.cc && cp CNAME ./dist && gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "latest",
@@ -26,7 +25,6 @@
     "babel-cli": "latest",
     "babel-preset-env": "latest",
     "babel-preset-es2015-ie": "latest",
-    "postcss-cli": "latest",
     "sass": "latest"
   },
   "devDependencies": {
