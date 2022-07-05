@@ -1,2 +1,6 @@
 *.css.map
 *.scss
+
+node_modules/
+
+.parcel-cache/

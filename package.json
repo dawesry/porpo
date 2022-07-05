@@ -1,0 +1,29 @@
+{
+  "name": "porpo",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "predeploy": "rm -rf dist && parcel build --public-url testing.dawes.cc && cp CNAME ./dist",
+    "deploy": "gh-pages -d dist",
+    "push-page": "rm -rf dist && parcel build --public-url testing.dawes.cc && cp CNAME ./dist && gh-pages -d dist"
+  },
+  "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
+    "@parcel/transformer-sass": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "gh-pages": "^4.0.0",
+    "parcel": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "typescript": "latest"
+  },
+  "devDependencies": {
+    "process": "^0.11.10",
+    "react-scripts": "latest"
+  }
+}
