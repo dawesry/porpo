@@ -23,7 +23,6 @@
     "react-dom": "latest",
     "typescript": "latest"
   },
-  
   "devDependencies": {
     "process": "^0.11.10",
     "react-scripts": "latest"
