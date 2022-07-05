@@ -21,7 +21,13 @@
     "parcel": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "autoprefixer": "latest",
+    "babel-cli": "latest",
+    "babel-preset-env": "latest",
+    "babel-preset-es2015-ie": "latest",
+    "postcss-cli": "latest",
+    "sass": "latest"
   },
   "devDependencies": {
     "process": "^0.11.10",
