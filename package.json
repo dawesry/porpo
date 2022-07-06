@@ -1,40 +1,35 @@
 {
   "name": "porpo",
   "author": "Ryan Dawes",
-  "scripts": {
-    "css-watch": "sass --watch --no-source-map _sass/:css/",
-    "js-watch": "babel  --extensions .tsx _javascript --watch --out-dir lib/",
-    "dev": "npm-run-all --parallel css-watch js-watch",
-    "css-build": "sass --no-source-map _sass/:css/",
-    "js-build": "babel --extensions .tsx _javascript --out-dir lib/",
-    "build": "npm-run-all --parallel css-build js-build",
-    "copy": "rm -rf dist && mkdir dist && cp CNAME *.html ./dist && cp -r css/ lib/ assets/ ./dist",
-    "pages": "gh-pages -d ./dist",
-    "clean": "rm -rf dist",
-    "deploy": "npm-run-all --sequential build copy pages clean"
-  },
+  "private": true,
   "dependencies": {
-    "@emotion/react": "latest",
-    "@emotion/styled": "latest",
-    "@mui/icons-material": "latest",
-    "@mui/material": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "react": "latest",
-    "react-dom": "latest"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.18.6",
-    "@babel/core": "^7.18.6",
-    "@babel/preset-env": "^7.18.6",
-    "@babel/preset-typescript": "^7.18.6",
-    "@babel/preset-react": "latest",
-    "bulma": "latest",
-    "gh-pages": "^4.0.0",
-    "npm": "latest",
-    "npm-run-all": "^4.1.5",
-    "react-scripts": "latest",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.8.7",
+    "bulma": "^0.9.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "latest",
     "typescript": "latest"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "@types/react-dom": "18.0.6",
+    "babel-loader": "^8.2.5",
+    "gh-pages": "^4.0.0",
+    "npm": "^8.13.2",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.6.2",
+    "process": "^0.11.10",
+    "react-scripts": "latest"
+  },
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "clean": "rm -rf dist/",
+    "copy": "cp CNAME dist/",
+    "pages": "gh-pages -d dist/",
+    "deploy": "npm-run-all --sequential clean build copy pages"
   }
 }
