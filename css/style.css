@@ -1,6 +1,5 @@
 /* IMPORTS */
-@import "https://fonts.googleapis.com/css?family=Montserrat&display=swap";
-/* CUSTOM VARIABLES */
+@import "https://fonts.googleapis.com/css?family=Montserrat&display=swap"; /* CUSTOM VARIABLES */
 :root {
   --primary: hsl(190, 100%, 50%);
   --home-font: "Montserrat", sans-serif;
